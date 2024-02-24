@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pipe Spillway Calculator</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Pipe Spillway Calculator</h1>
+        <form id="spillwayForm">
+            <label for="c">Coefficient of runoff:</label>
+            <input type="number" id="c" name="c" step="any" required><br><br>
+            <label for="i">Rainfall intensity (cm/hr):</label>
+            <input type="number" id="i" name="i" step="any" required><br><br>
+            <label for="A">Catchment area (hectares):</label>
+            <input type="number" id="A" name="A" step="any" required><br><br>
+            <label for="h">Drop (m):</label>
+            <input type="number" id="h" name="h" step="any" required><br><br>
+            <label for="Ke">Entrance loss coefficient (Ke):</label>
+            <input type="number" id="Ke" name="Ke" step="any" required><br><br>
+            <label for="Kc">Friction loss coefficient (Kc):</label>
+            <input type="number" id="Kc" name="Kc" step="any" required><br><br>
+            <label for="l">Length (m):</label>
+            <input type="number" id="l" name="l" step="any" required><br><br>
+            <input type="submit" value="Calculate">
+        </form>
+        <div id="result" style="display: none;">
+            <h2>Result:</h2>
+            <p>Peak discharge (m3/s): <span id="Q"></span></p>
+            <p>Diameter of pipe (m): <span id="d"></span></p>
+            <p>Velocity of flow (m/s): <span id="V"></span></p>
+            <p>Natural slope (Sn): <span id="Sn"></span></p>
+            <p>Conduit slope (S): <span id="S"></span></p>
+            <p>Flow condition: <span id="flowCondition"></span></p>
+        </div>
+    </div>
+    <script src="./pipe spillway.js"></script>
+</body>
+</html>
